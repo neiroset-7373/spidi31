@@ -4,32 +4,18 @@ plugins {
 
 android {
     namespace 'com.wintozo.spidi'
-    compileSdk 34 // Версия инструментов сборки
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.wintozo.spidi"
-        minSdk 24 // Это как раз поддержка Android 7.0 и выше
+        minSdk 24
         targetSdk 34
         versionCode 1
         versionName "3.1"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
 dependencies {
-    // Базовые библиотеки, без которых приложение не запустится
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
